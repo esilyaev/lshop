@@ -83,32 +83,27 @@
             <div class="menu-desktop">
               <ul class="main-menu">
                 <li class="active-menu">
-                  <a href="index.html">Home</a>
-                  <ul class="sub-menu">
-                    <li><a href="index.html">Homepage 1</a></li>
-                    <li><a href="home-02.html">Homepage 2</a></li>
-                    <li><a href="home-03.html">Homepage 3</a></li>
-                  </ul>
+                  <a href="{{ route('home') }}">Home</a>
                 </li>
 
                 <li>
-                  <a href="product.html">Shop</a>
+                  <a href="{{ route('shop') }}">Shop</a>
                 </li>
 
                 <li class="label1" data-label1="hot">
-                  <a href="shoping-cart.html">Features</a>
+                  <a href="{{ route ('features') }}">Features</a>
                 </li>
 
                 <li>
-                  <a href="blog.html">Blog</a>
+                  <a href="{{ route('blog') }}">Blog</a>
                 </li>
 
                 <li>
-                  <a href="about.html">About</a>
+                  <a href="{{ route('about') }}">About</a>
                 </li>
 
                 <li>
-                  <a href="contact.html">Contact</a>
+                  <a href="{{ route('contact') }}">Contact</a>
                 </li>
               </ul>
             </div>
@@ -330,88 +325,163 @@
     </div>
     <!-- END of CART -->
 
-    <!-- Slider -->
-    <section class="section-slide">
-      <div class="wrap-slick1">
-        <div class="slick1">
-          <div class="item-slick1" style="background-image: url(images/slide-01.jpg);">
-            <div class="container h-full">
-              <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-                <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
-                  <span class="ltext-101 cl2 respon2">
-                    Women Collection 2018
-                  </span>
-                </div>
-
-                <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-                  <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                    NEW SEASON
-                  </h2>
-                </div>
-
-                <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-                  <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-                    Shop Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item-slick1" style="background-image: url(images/slide-02.jpg);">
-            <div class="container h-full">
-              <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-                <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
-                  <span class="ltext-101 cl2 respon2">
-                    Men New-Season
-                  </span>
-                </div>
-
-                <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
-                  <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                    Jackets & Coats
-                  </h2>
-                </div>
-
-                <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-                  <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-                    Shop Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item-slick1" style="background-image: url(images/slide-03.jpg);">
-            <div class="container h-full">
-              <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-                <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
-                  <span class="ltext-101 cl2 respon2">
-                    Men Collection 2018
-                  </span>
-                </div>
-
-                <div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
-                  <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                    New arrivals
-                  </h2>
-                </div>
-
-                <div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-                  <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-                    Shop Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <main class="py-4">
       @yield('content')
     </main>
+    <!-- Footer -->
+	<footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Categories
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Women
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Men
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shoes
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Watches
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Help
+					</h4>
+
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns 
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
+
+					<p class="stext-107 cl7 size-201">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+					</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-instagram"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Newsletter
+					</h4>
+
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
+
+						<div class="p-t-18">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								Subscribe
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
+
+				<p class="stext-107 cl6 txt-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+				</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="zmdi zmdi-chevron-up"></i>
+		</span>
+	</div>
   </div>
 </body>
 
