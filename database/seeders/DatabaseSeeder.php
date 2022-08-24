@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\BlogCategory;
 use App\Models\BlogRecord;
+use App\Models\ShopCategory;
+use App\Models\ShopItem;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
@@ -39,5 +41,33 @@ class DatabaseSeeder extends Seeder
 
     BlogCategory::factory(10)->create();
     BlogRecord::factory(250)->create();
+    
+
+    ShopCategory::factory()->create(
+      [
+        'name' => 'Women',
+      ]
+    );
+    ShopCategory::factory()->create(
+      [
+        'name' => 'Men',
+      ]
+    );
+    ShopCategory::factory()->create(
+      [
+        'name' => 'Bag',
+      ]
+    );
+    ShopCategory::factory()->create(
+      [
+        'name' => 'Shoes',
+      ]
+    );
+    ShopCategory::factory()->create(
+      [
+        'name' => 'Watches',
+      ]
+    );
+    ShopItem::factory(20)->create();
   }
 }
