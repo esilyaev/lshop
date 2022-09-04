@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ShopItemController;
+use App\Models\ShopItem;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +28,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/blog', [App\Http\Controllers\BlogRecordController::class, 'index'])->name('blog');
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
-Route::get('/shop', [App\Http\Controllers\ShopController::class, 'index'])->name('shop');
+Route::controller(ShopController::class)->group(
+  function () {
+    Route::get('/shop', 'index')->name('shop');
+    Route::get('/shop/{id}', 'show')->name('product-detail');
+  }
+);
 Route::get('/features', [App\Http\Controllers\HomeController::class, 'features'])->name('features');
